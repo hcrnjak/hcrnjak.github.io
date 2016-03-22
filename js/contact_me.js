@@ -24,7 +24,8 @@ $(function() {
                     name: name,
                     phone: phone,
                     email: email,
-                    message: message
+                    message: message,
+                    _next: ""
                 },
                 cache: false,
                 success: function() {
