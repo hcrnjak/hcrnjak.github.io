@@ -25,7 +25,7 @@ $(function() {
                     phone: phone,
                     email: email,
                     message: message,
-                    _next: ""
+                    _next: "messageSent.html"
                 },
                 cache: false,
                 success: function() {
