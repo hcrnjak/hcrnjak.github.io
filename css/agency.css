@@ -161,6 +161,13 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+}
+
 
 /*****  Header stuff    *****/
 
@@ -204,9 +211,13 @@ header .intro-text .intro-heading {
     text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
 }
 
+.navbar-logo {
+    display: inline-block !important;
+    max-width: 1em;
+}
+
 .picture-width {
-    width: 50%;
-    margin-bottom: 5%;
+    width: 100%;
 }
 
 @media (min-width: 400px) {
@@ -249,6 +260,28 @@ header .intro-text .intro-heading {
     }
 }
 
+
+/**** Our product stuff *****/
+
+.product-subtitle {
+    font-size: 20px;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: none;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.product-ability {
+    display: none;
+    margin: 5px 5px 20px 5px;
+    width: 190px;
+}
+
+.section-heading-margin {
+    margin-top: 0px;
+}
+
 section {
      padding: 100px 0;
  }
@@ -265,11 +298,55 @@ section h3.section-subheading {
     font-weight: 400;
     margin-bottom: 75px;
 }
+section .title {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+section .title-text {
+    font-size: 15px;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: none;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 410px) {
+    .product-ability {
+        display: inline-block;
+    }
+
+    section .title-text {
+        font-size: 20px;
+    }
+}
+
 @media (min-width:768px) {
     section {
         padding: 150px 0;
     }
-}.service-heading {
+}
+
+@media (min-width: 992px) {
+    .section-heading-margin {
+        margin-top: 10%;
+    }
+}
+
+/****       Examples stuff  *****/
+a.carousel-control.carousel-next {
+    background-image: none;
+    color: #fec503;
+    font-size: 3rem;
+}
+
+.carousel img {
+    max-height: 90vh;
+    max-width: 90vw;
+}
+
+.service-heading {
      margin: 15px 0;
      text-transform: none;
  }
@@ -478,9 +555,6 @@ section h3.section-subheading {
     }
     .timeline>li.timeline-inverted>.timeline-panel {
         padding: 0 20px 20px;
-    }
-    .picture-width {
-        width: 70%;
     }
 }@media (min-width:1200px) {
     .timeline>li {
