@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fff;
 }
 .btn-xl {
-    color: #fff;
+    color: black;
     background-color: #fed136;
     border-color: #fed136;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -133,6 +133,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     background-color: #fec503;
 }
+
 @media (min-width:768px) {
     .navbar-default {
         background-color: transparent;
@@ -160,6 +161,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+
+/*****  Header stuff    *****/
+
 header {
      height : 100vh;
      text-align: center;
@@ -171,9 +175,17 @@ header {
     background-position: center center;
     background-size: cover;
  }
+
+header img {
+    max-width: 200px;
+}
+
 header .intro-text {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
 }
 header .intro-text .intro-lead-in {
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -197,11 +209,28 @@ header .intro-text .intro-heading {
     margin-bottom: 5%;
 }
 
-@media (min-width:768px) {
-    header .intro-text {
-        padding-top: 40vh;
-        padding-bottom: 200px;
+@media (min-width: 400px) {
+    header img {
+        max-width: 370px;
     }
+}
+
+@media (max-height: 500px) {
+    header img {
+        display: none;
+    }
+
+    header .intro-heading::before {
+        content: "Smart advertising";
+        display: block;
+        font-family: "Kaushan Script";
+        font-size: 30px;
+        font-weight: 100;
+        text-transform: none;
+    }
+}
+
+@media (min-width:768px) {
     header .intro-text .intro-lead-in {
         font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-style: italic;
@@ -218,7 +247,9 @@ header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
     }
-}section {
+}
+
+section {
      padding: 100px 0;
  }
 section h2.section-heading {
